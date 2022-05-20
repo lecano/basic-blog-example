@@ -1,4 +1,4 @@
-[![StyleCI](https://github.styleci.io/repos/156258800/shield?branch=master)](https://github.styleci.io/repos/156258800?branch=master)
+[![StyleCI](https://github.styleci.io/repos/493073716/shield?branch=master)](https://github.styleci.io/repos/493073716?branch=master)
 
 Basic CRUD blog example with Laravel 9, Bootstrap 5 and SQLite.
 
