@@ -1,16 +1,42 @@
-## About Laravel
+Basic CRUD blog example with Laravel 9, Bootstrap 5 and SQLite.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Install
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+```bash
+composer install
+```
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+```bash
+cp .env.example .env
+```
+
+Open and edit .env file:
+
+```bash
+DB_CONNECTION=sqlite
+DB_DATABASE='full-path-to/database/database.sqlite'
+
+# Windows example:
+DB_DATABASE='D:/repo-name/database/database.sqlite'
+```
+
+```bash
+touch database.sqlite 
+```
+
+```bash
+php artisan key:generate
+```
+
+```bash
+php artisan migrate --seed
+```
+
+```bash
+php artisan storage:link
+```
+
+Open `http://127.0.0.1:8000`
 
 ## Contributing
 
