@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers\Backend;
 
-use App\Models\Post;
-use App\Http\Requests\PostRequest;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\PostRequest;
+use App\Models\Post;
 use Illuminate\Support\Facades\Storage;
 
 class PostController extends Controller
@@ -40,7 +40,7 @@ class PostController extends Controller
     public function store(PostRequest $request)
     {
         $post = Post::create([
-            'user_id' => auth()->user()->id
+            'user_id' => auth()->user()->id,
         ] + $request->all());
 
         if ($request->file('file')) {
@@ -105,6 +105,7 @@ class PostController extends Controller
     {
         Storage::disk('public')->delete($post->image);
         $post->delete();
+
         return back()->with('status', 'Eliminado con éxito');
     }
 }
