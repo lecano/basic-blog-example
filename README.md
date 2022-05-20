@@ -1,3 +1,5 @@
+[![StyleCI](https://github.styleci.io/repos/156258800/shield?branch=master)](https://github.styleci.io/repos/156258800?branch=master)
+
 Basic CRUD blog example with Laravel 9, Bootstrap 5 and SQLite.
 
 ## Install
@@ -34,6 +36,10 @@ php artisan migrate --seed
 
 ```bash
 php artisan storage:link
+```
+
+```bash
+php artisan serve
 ```
 
 Open `http://127.0.0.1:8000`
